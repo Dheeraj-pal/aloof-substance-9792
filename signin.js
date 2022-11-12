@@ -9,20 +9,68 @@ function signin(event) {
     inpass,
   };
   inArr.push(inObj);
-    localStorage.getItem("userdetails");
+  localStorage.getItem("userdetails");
   let json = JSON.parse(localStorage.getItem("userdetails"));
   for (i = 0; i < json.length; i++) {
     if (json[i]["upemail"] == inemail) {
       if (json[i]["uppass"] == inpass) {
-        window.location.href = "index.html";
-        alert("login successful");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: "success",
+          title: "Login successful",
+        });
+        setTimeout(function () {
+          window.location.href = "index.html";
+        }, 2500);
+
         break;
       } else {
-        alert("wrong password");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: "error",
+          title: "Wrong password",
+        });
         break;
       }
     } else {
-      alert("wrong email");
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: "error",
+        title: "Wrong email"+"\n"+"create an account first!",
+      });
       break;
     }
   }

@@ -20,13 +20,61 @@ function signup(event) {
             localStorage.setItem("userdetails", JSON.stringify(upArr));
             window.location.href = "signin.html";
           } else {
-            alert("Password should contain altesat 8 characters");
+            // alert("Password should contain altesat 8 characters");
+            const Toast = Swal.mixin({
+              toast: true,
+              position: "top-end",
+              showConfirmButton: false,
+              timer: 2000,
+              timerProgressBar: true,
+              didOpen: (toast) => {
+                toast.addEventListener("mouseenter", Swal.stopTimer);
+                toast.addEventListener("mouseleave", Swal.resumeTimer);
+              },
+            });
+
+            Toast.fire({
+              icon: "warning",
+              title: "Password should contain altesat 8 characters",
+            });
           }
         } else {
-          alert("Fill all details");
+          // alert("Fill all details");
+          const Toast = Swal.mixin({
+            toast: true,
+            position: "top-end",
+            showConfirmButton: false,
+            timer: 2000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener("mouseenter", Swal.stopTimer);
+              toast.addEventListener("mouseleave", Swal.resumeTimer);
+            },
+          });
+
+          Toast.fire({
+            icon: "question",
+            title: "Fill all details",
+          });
         }
       } else {
-        alert("email already registered");
+        // alert("Email already registered");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: "error",
+          title: "Email already registered",
+        });
       }
     }
   } else {
@@ -34,12 +82,64 @@ function signup(event) {
       if (uppass.length >= 8) {
         upArr.push(upObj);
         localStorage.setItem("userdetails", JSON.stringify(upArr));
-        window.location.href = "signin.html";
+        // alert("Account created")
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: "success",
+          title: "Account created",
+        });
+        // window.location.href = "signin.html";
+        setTimeout(function () {
+          window.location.href = "signin.html";
+        }, 2500);
       } else {
-        alert("Password should contain altesat 8 characters");
+        // alert("Password should contain altesat 8 characters");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "top-end",
+          showConfirmButton: false,
+          timer: 2000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener("mouseenter", Swal.stopTimer);
+            toast.addEventListener("mouseleave", Swal.resumeTimer);
+          },
+        });
+
+        Toast.fire({
+          icon: "warning",
+          title: "Password should contain altesat 8 characters",
+        });
       }
     } else {
-      alert("Fill all details");
+      // alert("Fill all details");
+      const Toast = Swal.mixin({
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+        timer: 2000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+          toast.addEventListener("mouseenter", Swal.stopTimer);
+          toast.addEventListener("mouseleave", Swal.resumeTimer);
+        },
+      });
+
+      Toast.fire({
+        icon: "question",
+        title: "Fill all details",
+      });
     }
   }
 }
