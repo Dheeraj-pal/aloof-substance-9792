@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
@@ -9,7 +10,7 @@
   display: flex;
   height: 80px;
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.03) 0px 1px 2px 0px;
 }
@@ -19,7 +20,22 @@
   align-items: center;
   justify-content: space-between;
 }
-/* #opt {
+#opt > p:hover,
+#opt > button:hover {
+  color: rgb(27, 97, 201);
+  transition: 0.6s ease;
+  cursor: pointer;
+}
+#opt > button {
+  border: none;
+  background-color: white;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 500;
+  color: rgb(24, 29, 38);
+}
+
+#opt {
   width: 40%;
   display: flex;
   justify-content: space-around;
@@ -28,13 +44,67 @@
   font-weight: 600;
   color: rgb(27, 27, 27);
   align-items: center;
-} */
-.opt_p {
-  margin-left: -4%;
-  margin-top: 1.2%;
-  font-size: 9px;
-  font-weight: bold;
-  color: #969696;
+  position: relative;
+  background-color: white;
+}
+
+.DD-content {
+  display: none;
+  position: absolute;
+  max-width: 100%;
+  max-height: 1vh;
+  margin-top: 88px;
+  margin-left: -475px;
+  background-color: white;
+}
+.DD-content > .alag {
+  height: 40px;
+  width: 100%;
+}
+.DD-content > div {
+  background-color: white;
+  padding-top: 20px;
+  height: 60px;
+  width: 100%;
+  padding-left: 80px;
+  overflow: auto;
+}
+.DD-content > .bhtalag {
+  height: 150px;
+  background-color: #f0f6ff;
+}
+.DD-content > .bhtalag > h2 {
+  font-size: 20px;
+  margin-top: -10px;
+  margin-bottom: 20px;
+  line-height: 26px;
+  letter-spacing: 0.2px;
+}
+.DD-content > .bhtalag > h3 {
+  font-size: 16px;
+  line-height: 20.8px;
+  margin-top: 10px;
+  letter-spacing: 0.16px;
+  color: 1b61c9;
+}
+.DD-content > div:hover {
+  cursor: pointer;
+  background-color: rgb(234, 234, 234);
+  transition: 0.6s ease;
+}
+.DD-content > div > h2 {
+  font-size: 18px;
+  line-height: 23.4px;
+  letter-spacing: 0.18px;
+  font-weight: 500;
+  color: rgb(24, 29, 38);
+}
+.DD-content > div > p {
+  font-size: 16px;
+  line-height: 20.8px;
+  letter-spacing: 0.16px;
+  font-weight: 400;
+  color: rgba(2, 13, 32, 0.43);
 }
 .fa-solid {
   font-size: 12px;
@@ -63,6 +133,10 @@
   letter-spacing: 0.16px;
   color: white;
   font-weight: 600;
+  transition: 1s ease;
+}
+#login > a:hover {
+  background-color: #0953c3;
 }
 #login > p {
   border: 2px solid #949494;
@@ -71,10 +145,20 @@
   font-weight: 600;
   font-size: 17px;
 }
-#login > span {
+#login > p:hover {
+  cursor: pointer;
+  background-color: #f2e8e8;
+  transition: 0.6s ease;
+}
+#login > span > a {
   font-size: 17px;
   font-weight: 600;
   color: #181d26;
+  text-decoration: none;
+}
+#login > span > a:hover {
+  color: #0768f8;
+  transition: 0.6s ease;
 }
 .topSSB {
   position: relative;
@@ -84,16 +168,18 @@
   height: 550px;
 }
 .SSBtext {
+  position: absolute;
+  display: inline-block;
   width: 36%;
-  margin-left: 3%;
-  margin-top: -27%;
+  margin-top: 150px;
+  margin-left: 50px;
   color: rgb(51, 51, 51);
 }
 .SSBtext a {
   color: rgb(51, 51, 51);
 }
 .SSBtext > h1 {
-  line-height: 70px;
+  line-height: 70.4px;
   font-size: 64px;
   font-weight: 500;
 }
@@ -108,6 +194,11 @@
   border: none;
   margin-top: 40px;
 }
+.SSBtext > button:hover {
+  cursor: pointer;
+  transition: 0.6s ease;
+  background-color: #0953c3;
+}
 .SSBtext > p {
   margin-top: 10px;
   font-size: 20px;
@@ -117,7 +208,7 @@
 }
 
 #brandslogo {
-  margin-top: 150px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-around;
 }
@@ -128,7 +219,7 @@
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  margin-top: 100px;
+  margin-top: 120px;
 }
 #tt {
   width: 150%;
@@ -381,6 +472,8 @@ video {
 .previous:hover,
 .next:hover {
   background-color: rgb(166, 166, 166);
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  color: rgb(255, 255, 255);
 }
 #prevnext {
   width: 90%;
@@ -576,6 +669,10 @@ video {
   border-radius: 8px;
   padding: 7px 14px;
 }
+.topbanner > div > button:hover {
+  transition: 0.6s ease;
+  background-color: #0768f8;
+}
 .topbanner > div > p {
   margin-top: 10px;
   font: 16px;
@@ -618,13 +715,21 @@ video {
   letter-spacing: 0.16px;
   color: rgb(51, 51, 51);
 }
+#banneropts > div > div:nth-child(1) > p:hover {
+  cursor: pointer;
+  transition: 0.6s ease;
+  color: #0768f8;
+}
 #banneropts > div > div:nth-child(2) {
   margin-right: 10px;
   width: 15%;
 }
-.fa-brands{
+.fa-brands {
   color: #9297a0;
   font-size: 18px;
+}
+#banneropts > div > div:nth-child(2) > i:hover {
+  color: #676b72;
 }
 hr {
   width: 93%;
@@ -655,8 +760,8 @@ hr {
   letter-spacing: 0.16px;
   color: rgb(51, 51, 51);
 }
-#last{
-  width: 99.%;
+#last {
+  width: 99%;
   margin: auto;
   height: 65px;
   display: flex;
@@ -664,27 +769,27 @@ hr {
   background-color: #f2f4f7;
   border: 2px solid f2f4f7;
 }
-#last>div{
+#last > div {
   margin: auto;
   width: 93%;
   display: flex;
   justify-content: space-between;
 }
-#last>div>div{
+#last > div > div {
   width: 50%;
   margin: auto;
   display: flex;
 }
-#last>div>div:nth-child(2){
+#last > div > div:nth-child(2) {
   margin-left: 800px;
 }
-#last>div>div:nth-child(2)>img{
+#last > div > div:nth-child(2) > img {
   margin-right: 20px;
 }
-#last>div>div:nth-child(1)>p~p{
+#last > div > div:nth-child(1) > p ~ p {
   margin-left: 30px;
 }
-#last>div>div:nth-child(1)>p{
+#last > div > div:nth-child(1) > p {
   font-size: 16px;
   line-height: 21.3px;
   letter-spacing: 0.16px;

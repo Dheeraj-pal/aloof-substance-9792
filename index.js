@@ -45,3 +45,22 @@ function showS(n) {
   slidevid[Index - 1].style.display = "block";
   dashs[Index - 1].className += " active";
 }
+let count = 0;
+function showa() {
+  if (count % 2 != 0) {
+    document.querySelector("#DD0").style.display = "block";
+  }
+  if (count % 2 == 0) {
+    document.querySelector("#DD0").style.display = "none";
+  }
+  count++;
+}
+function show() {
+  if (count % 2 != 0) {
+    document.querySelector("#DD1").style.display = "block";
+  }
+  if (count % 2 == 0) {
+    document.querySelector("#DD1").style.display = "none";
+  }
+  count++;
+}
