@@ -16,25 +16,103 @@
       <img src="images\EKO SYSTEM.png" />
       <div id="nav_options">
         <div id="opt">
-          <p>Product <span class="fa-solid fa-angle-right"></span></p>
-          <p>Solutions <span class="fa-solid fa-angle-right"></span></p>
+          <button onclick="showa()" class="DD_prod">
+            Product <span class="fa-solid fa-angle-right"></span>
+          </button>
+          <div class="DD-content" id="DD0">
+            <div>
+              <h2>Overview</h2>
+              <p>Welcome to Eco System! Here's the basics</p>
+            </div>
+            <div>
+              <h2>Features</h2>
+              <p>Discover automtion, views, reportings and more</p>
+            </div>
+            <div>
+              <h2>integration</h2>
+              <p>Bring your favorite tools into Eco System</p>
+            </div>
+            <div>
+              <h2>Enterprice Overview</h2>
+              <p>
+                See how Eco System scales for large and complex organization
+              </p>
+            </div>
+            <div class="alag"><h2>Marketplace</h2></div>
+            <div class="alag"><h2>Download Apps</h2></div>
+            <div class="alag"><h2>What's new</h2></div>
+            <div class="bhtalag">
+              <h2>Pricing</h2>
+              <p>
+                From small business to global enterprise, there’s an Airtable
+                plan that’s just right for you.
+              </p>
+              <h3>
+                Explore Pricing <i class="fa-solid fa-arrow-right-long"></i>
+              </h3>
+            </div>
+          </div>
+          <button onclick="show()" class="DD_sol">
+            Solutions <span class="fa-solid fa-angle-right"></span>
+          </button>
+          <div class="DD-content" id="DD1">
+            <div>
+              <h2>By team</h2>
+              <p>See how teams of all stripes and sizes use Eco System</p>
+            </div>
+            <div>
+              <h2>By use case</h2>
+              <p>
+                Get inspired by use cases that'll make you fall in love with Eco
+                System
+              </p>
+            </div>
+            <div>
+              <h2>see all solutions</h2>
+              <p></p>
+            </div>
+            <div>
+              <h2></h2>
+              <p></p>
+            </div>
+            <div><h2></h2></div>
+            <div><h2></h2></div>
+            <div><h2></h2></div>
+            <div></div>
+            <div></div>
+          </div>
           <p>Pricing</p>
-          <p>Enterprice <span class="fa-solid fa-angle-right"></span></p>
-          <p>resources <span class="fa-solid fa-angle-right"></span></p>
+          <button class="DD_ent">
+            Enterprice <span class="fa-solid fa-angle-right"></span>
+          </button>
+          <button class="DD_res">
+            resources <span class="fa-solid fa-angle-right"></span>
+          </button>
         </div>
         <div id="login">
           <p>Contact sales</p>
-          <a href="">Sign up for free</a>
-          <span>Sign in</span>
+          <a href="signup.html">Sign up for free</a>
+          <span><a href="signin.html"> Sign in</a></span>
         </div>
       </div>
     </div>
     <div class="top_banner">
       <div class="topSSB">
+        <div class="SSBtext">
+          <h1>Every part of your work, connected.</h1>
+          <p>
+            Now anyone can build apps that connect every part of their work,
+            while staying in sync with the rest of their business.
+          </p>
+          <button>Sign up for free</button>
+          <p>or <a href="#">contact sales</a></p>
+        </div>
         <img
           src="images\top\SSBanner\david-van-dijk-3LTht2nxd34-unsplash.jpg"
           style="width: 100%"
         />
+      </div>
+      <div class="topSSB">
         <div class="SSBtext">
           <h1>Every part of your work, connected.</h1>
           <p>
@@ -44,26 +122,12 @@
           <button>Sign up for free</button>
           <p>or <a href="#">contact sales</a></p>
         </div>
-      </div>
-
-      <div class="topSSB">
         <img
           src="images\top\SSBanner\nordwood-themes-kRNZiGKtz48-unsplash.jpg"
           style="width: 100%"
         />
-        <div class="SSBtext">
-          <h1>Every part of your work, connected.</h1>
-          <p>
-            Now anyone can build apps that connect every part of their work,
-            while staying in sync with the rest of their business.
-          </p>
-          <button>Sign up for free</button>
-          <p>or <a href="#">contact sales</a></p>
-        </div>
       </div>
-
       <div class="topSSB">
-        <img src="images\top\SSBanner\scott-webb-hDyO6rr3kqk-unsplash1.jpg" />
         <div class="SSBtext">
           <h1>Every part of your work, connected.</h1>
           <p>
@@ -73,6 +137,7 @@
           <button>Sign up for free</button>
           <p>or <a href="#">contact sales</a></p>
         </div>
+        <img src="images\top\SSBanner\scott-webb-hDyO6rr3kqk-unsplash1.jpg" />
       </div>
       <div id="brandslogo">
         <img src="https://www.airtable.com/images/home/logobar/Levis.svg" />
@@ -85,7 +150,7 @@
       <div id="topbottom">
         <div id="tt">
           <p>
-            EkoSystem is your organization's single source of truth. It's how
+            EcoSystem is your organization's single source of truth. It's how
             teams, data, and workflows are deeply connected by apps anyone can
             build.
           </p>
@@ -225,7 +290,7 @@
           <h1 id="hhhtxt" class="htxt">Baker Hughes</h1>
           <p class="comp">
             When Baker Hughes chose to transform to meet the needs of a changing
-            energy landscape, the Communications team turned to EKO SYSTEM.
+            energy landscape, the Communications team turned to EcO SYSTEM.
           </p>
           <p class="casetxt">
             Read BakerHughes case study <i class="fa-solid fa-arrow-right"></i>
@@ -351,7 +416,7 @@
     </div>
     <div id="last">
       <div>
-        <div >
+        <div>
           <p>Security</p>
           <p>API</p>
           <p>Sitemap</p>
@@ -359,8 +424,15 @@
           <p>Terms</p>
         </div>
         <div>
-          <img width="50%" src="https://logos-download.com/wp-content/uploads/2016/06/Download_on_the_App_Store_logo.png">
-          <img width="50%" src="https://seeklogo.com/images/G/get-it-on-google-play-badge-logo-8CDE582776-seeklogo.com.png" alt="">
+          <img
+            width="50%"
+            src="https://logos-download.com/wp-content/uploads/2016/06/Download_on_the_App_Store_logo.png"
+          />
+          <img
+            width="50%"
+            src="https://seeklogo.com/images/G/get-it-on-google-play-badge-logo-8CDE582776-seeklogo.com.png"
+            alt=""
+          />
         </div>
       </div>
     </div>
