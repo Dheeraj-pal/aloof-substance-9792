@@ -102,7 +102,7 @@ function signup(event) {
         // window.location.href = "signin.html";
         setTimeout(function () {
           window.location.href = "signin.html";
-        }, 2500);
+        }, 4500);
       } else {
         // alert("Password should contain altesat 8 characters");
         const Toast = Swal.mixin({
